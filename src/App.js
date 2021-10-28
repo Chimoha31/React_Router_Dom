@@ -29,11 +29,11 @@ const App = () => {
         {/* Menu */}
         <Route
           path="/Menu"
-          render={() => (
+          render={({ match: url }) => (
             <Switch>
-              <Route exact path="/Menu"><Menu /></Route>
-              <Route path={"/Menu/MainMenuFoods"}><MenuMainFoods /></Route>
-              <Route path={"/Menu/MenuDessert"}><MenuDessert /></Route>
+              <Route exact path={url}><Menu /></Route>
+              <Route path={`${url}/MenuMainFoods`}><MenuMainFoods /></Route>
+              <Route path={`${url}/MenuDessert`}><MenuDessert /></Route>
             </Switch>
           )}
         />
