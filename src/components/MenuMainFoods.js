@@ -4,7 +4,7 @@ const MenuMainFoods = () => {
 
   return(
     <>
-      <p>メインメニューです</p>
+      <p>This is Main Foods Menu</p>
     </>
   )
 }

@@ -3,7 +3,7 @@
 const MenuDessert = () => {
   return(
     <>
-      <p>デザートメニューです</p>
+      <p>This is Dessert Menu</p>
     </>
   )
 };

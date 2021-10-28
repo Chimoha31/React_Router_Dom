@@ -5,7 +5,7 @@ const Menu = () => {
   return(
     <div>
     <p>Menuのページです</p>
-    <Link to="/Menu/MenuMainFoods">Main Menu</Link>
+    <Link to="/Menu/MenuMainFoods">Main Foods</Link>
     <br />
     <Link to="/Menu/MenuDessert">Dessert Menu</Link>
 
