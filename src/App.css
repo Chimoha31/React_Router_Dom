@@ -5,7 +5,11 @@
 li {
   text-align: center;
   list-style: none;
+  transform: translateX(-5%);
 }
 
+p {
+  text-align: center;
+}
 
 
