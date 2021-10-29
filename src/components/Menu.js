@@ -8,10 +8,6 @@ const Menu = () => {
     <Link to="/Menu/MenuMainFoods">Main Foods</Link>
     <br />
     <Link to="/Menu/MenuDessert">Dessert Menu</Link>
-
-    {/* <Switch>
-      <Route></Route>
-    </Switch> */}
     </div>
   )
 }

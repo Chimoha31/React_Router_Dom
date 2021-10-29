@@ -1,8 +1,8 @@
 // import React from 'react';
 import { Switch, Route } from "react-router-dom";
 import Home from "../components/Home";
-import Contact from "../components/Contact";
 import MenuRoute from "../router/MenuRoute";
+import ContactRoute from "./ContactRoute";
 
 const Router = () => {
   return (
@@ -31,9 +31,22 @@ const Router = () => {
       />
 
       {/* Contact */}
-      <Route path="/Contact">
-        <Contact />
-      </Route>
+      <Route 
+      path="/Contact"
+      render={({ match : { url } }) => (
+        <Switch>
+          {ContactRoute.map((route) => (
+            <Route
+              key={route.path}
+              exact={route.exact}
+              path={`${url}${route.path}`}
+              >
+                {route.children}
+            </Route>
+          ))}
+        </Switch>
+      )}
+      />
     </Switch>
   );
 };
