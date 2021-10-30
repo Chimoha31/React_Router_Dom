@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "../components/Home";
 import MenuRoute from "../router/MenuRoute";
 import ContactRoute from "./ContactRoute";
+import Page404 from '../components/Page404';
 
 const Router = () => {
   return (
@@ -31,22 +32,26 @@ const Router = () => {
       />
 
       {/* Contact */}
-      <Route 
-      path="/Contact"
-      render={({ match : { url } }) => (
-        <Switch>
-          {ContactRoute.map((route) => (
-            <Route
-              key={route.path}
-              exact={route.exact}
-              path={`${url}${route.path}`}
+      <Route
+        path="/Contact"
+        render={({ match: { url } }) => (
+          <Switch>
+            {ContactRoute.map((route) => (
+              <Route
+                key={route.path}
+                exact={route.exact}
+                path={`${url}${route.path}`}
               >
                 {route.children}
-            </Route>
-          ))}
-        </Switch>
-      )}
+              </Route>
+            ))}
+          </Switch>
+        )}
       />
+        {/* どれにも一致しない場合、Page404を表示 */}
+      <Route path="*">
+        <Page404 />
+      </Route>
     </Switch>
   );
 };
