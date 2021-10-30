@@ -6,7 +6,9 @@ const Contact = () => {
   return(
     <>
     <p>Contact</p>
-    <Link to="/Contact/999">パラメーター</Link>
+    <Link to="/Contact/999">URLパラメーター</Link>
+    <br/>
+    <Link to="/Contact/999?name=hogehoge">Query parameter</Link>
     </>
   )
 }
